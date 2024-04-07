@@ -1,0 +1,47 @@
+
+<p></p>
+
+<div class="card" style="width: 66rem;">
+  <div class="card-header">
+    <h5 class="card-title">Detalle Vehiculo: {{vehiculo?.codigo}} - {{vehiculo?.marca}} </h5>
+  </div>
+<div class="row">
+  <div class="col-sm-3">
+    <p></p>
+      <div class="card-body">
+        <li class="list-group-item text-end fw-bolder">Marca:</li>
+        <li class="list-group-item text-end fw-bolder">Modelo</li>
+        <li class="list-group-item text-end fw-bolder">Año:</li>
+        <li class="list-group-item text-end fw-bolder">Kilometraje:</li>
+        <li class="list-group-item text-end fw-bolder">Precio:</li>
+        <li class="list-group-item text-end fw-bolder">Calificación:</li>
+      </div>
+  </div>
+  <div class="col-sm-3">
+    <p></p>
+      <div class="card-body">
+        <li class="list-group-item">{{vehiculo?.marca}}</li>
+        <li class="list-group-item">{{vehiculo?.modelo}}</li>
+        <li class="list-group-item">{{vehiculo?.anio}}</li>
+        <!--<li class="list-group-item">{{vehiculo?.color}}</li>-->
+        <li class="list-group-item">{{vehiculo?.kilometraje}}</li>
+        <li class="list-group-item">{{vehiculo?.precio|currency}}</li>
+        <li class="list-group-item"><app-calificacion [calificacion]="vehiculo?.calificacion"></app-calificacion></li>
+      </div>
+    </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">
+          <img src="{{vehiculo?.imagen}}" class="card-img-top" alt="...">
+        </p>
+      </div>
+    </div>
+   
+  </div>
+
+</div>
+<div class="card-footer">
+  <button class="btn btn-outline-secondary" [routerLink]="['/vehiculos']">Regresar</button>
+</div>
+</div>
